@@ -165,7 +165,7 @@ export class AppService {
     }
   }
 
-  /////////////////////i was heereeee
+  ////// sort by date
   ser_sort_date(): BookStructure[] {
     const exists = this.book_m.toSorted((a, b) => {
       return (
@@ -179,7 +179,7 @@ export class AppService {
       throw new BookNotAvail();
     }
   }
-
+  /////sort by title
   ser_sort_title(): BookStructure[] {
     const exists = this.book_m.toSorted((a, b) => {
       return a.title.localeCompare(b.title);
@@ -190,7 +190,7 @@ export class AppService {
       throw new BookNotAvail();
     }
   }
-
+  ///sort by author
   ser_sort_author(): BookStructure[] {
     const exists = this.book_m.toSorted((a, b) => {
       return a.author.localeCompare(b.author);
